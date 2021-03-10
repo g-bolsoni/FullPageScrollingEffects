@@ -1,3 +1,4 @@
+/* ------------- Css Global ------------- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,200;1,300&display=swap');
 
 *{
@@ -5,11 +6,99 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+ul, li, a{
+    text-decoration: none;
+    list-style: none;
+}
+body/{
+    width: 100%;
+    height: 100vh;
+}
+/* -----X------- Css Global ------X------ */
+/* ------------- Css Header ------------- */
+
+
+/* -----X------- Css Header -------X----- */
+
+.header{
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    z-index: 1;
+    
+    background-color: #fff;
+    box-shadow: 5px 0 10px rgba(0,0,0,0.3);
+}
+.header .logo{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #000;
+    padding: 0 100px;
+}
+
+.header .headerMenu {
+    display: flex;
+
+}
+
+.header .headerMenu ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+
+    margin: 0 100px;
+
+    font-size: 18px;
+    color: #0007;
+    transition: color linear 0.2s;
+}
+.header .headerMenu li{
+    font-size: 18px;
+    color: #0007;
+    padding: 30px 10px;
+}
+
+.header .headerMenu li:hover{
+    color: #000;
+    transition: color linear 0.2s;
+    cursor: pointer;
+} 
+
+/* ------------------ */
+.header .headerMenu li:nth-child(1) ul{
+    display: none;
+}
+.header .headerMenu li:nth-child(1):hover ul{
+    display: block;
+    position: absolute;
+
+    align-items: center;
+
+    margin: 30px 0 0 -20px;
+    width: 120px;
+    background-color: #f3f3f3;
+}
+.header .headerMenu li:nth-child(1) ul li{
+    padding: 8px;
+    transition: border linear 0.1s;
+
+}
+.header .headerMenu li:nth-child(1) ul li:hover{
+    border-left: 4px solid #000;
+    transition: border linear 0.1s;
+}
+
+/* ------------- Css Container ------------- */
 
 .container{
     position: relative;
-    width: 100%;
-    height: 100vh;
     overflow: auto;
     scroll-snap-type: y mandatory;
 }
@@ -21,8 +110,12 @@
     background-blend-mode: darken;
     scroll-snap-align: start;
 }
+/* -----X------ Css Container ------X------ */
+
+/* ------------- Css Backgrounds ------------- */
 
 /* Style backgrounds */
+
 .container .section:nth-child(1){
     background: url('assets/bg1.jpeg');
     background-size:cover, contain, auto ;
@@ -49,8 +142,11 @@
     background-attachment: fixed;
     
 }
+/* -----X------- Css Backgrounds ------X------ */
 
-/* Sytle text*/
+/* ------------- Css Text ------------- */
+
+
 .container .section .content{
     position: absolute;
     top: 100px;
@@ -79,3 +175,4 @@
     box-shadow: 5px 5px 5px rgba(0, 0 , 0 , 0.5);
     border-radius: 10px;
 }
+/* -----X------- Css Text ------X------ */
