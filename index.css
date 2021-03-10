@@ -117,27 +117,27 @@ body/{
 /* Style backgrounds */
 
 .container .section:nth-child(1){
-    background: url('assets/bg1.jpeg');
+    background: url('assets/cbg1.jpg');
     background-size:cover, contain, auto ;
     background-attachment: fixed;
     
 }
 .container .section:nth-child(2){
-    background: url('assets/bg2.jpeg');
+    background: url('assets/cbg2.jpg');
     background-size:cover, contain, auto ;
     background-attachment: fixed;
 }
 .container .section:nth-child(3){
-    background: url('assets/bg3.jpg');
+    background: url('assets/cbg3.jpg');
     background-size:cover, contain, auto ;
     background-attachment: fixed;
 }.container .section:nth-child(4){
-    background: url('assets/bg4.jpg');
+    background: url('assets/cbg4.jpg');
     background-size:cover, contain, auto ;
     background-attachment: fixed;
     
 }.container .section:nth-child(5){
-    background: url('assets/bg5.jpg');
+    background: url('assets/cbg5.jpg');
     background-size:cover, contain, auto ;
     background-attachment: fixed;
     
