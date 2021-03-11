@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full Page Scrolling</title>
@@ -10,8 +11,21 @@
 <body>
     <header class="header">
         <a class="logo" href="#">Logo</a>
-
-        <nav class="headerMenu">
+        <!-- Menuzinho -->
+        <nav class="topnav" id="myTopnav">
+            <ul class="listaUl">
+                <li class="listaLi"><a href="#news">News</a></li>
+                <li class="listaLi"><a href="#contact">Contact</a></li>
+                <li class="listaLi"><a href="#about">About</a></li>
+            </ul>
+            <!-- Icon -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </nav>
+    
+        <!-- Navegação -->
+        <!-- <nav class="headerMenu">
             <ul>
                 <li>Produtos
                     <ul>
@@ -25,7 +39,7 @@
                 <li>Contato</li>
                 <li>Quem somos</li>
             </ul>
-        </nav>
+        </nav> -->
     </header>
     <div class="container">
         <!-- Screen 1 -->
@@ -51,7 +65,6 @@
                 </p>
             </div>
         </div>
-
         <!-- Screen 3 -->
 
         <div class="section">
@@ -92,5 +105,7 @@
         </div>
 
     </div>
+
+    <script src="index.js"></script>
 </body>
 </html>

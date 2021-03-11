@@ -95,6 +95,137 @@ body/{
     transition: border linear 0.1s;
 }
 
+/* -------- Menu Responsivo ---------- */
+.header .menuHeader{
+    position: relative;
+    height: 3rem;
+    display: none;
+
+}
+/* .header .menuIcon ul li{
+    display: none;
+} */
+
+
+/* ----------- Header Responsivo ------------  */
+/* @media(max-width:1190px){
+    /* -------------- Menu responsivo -------------- */
+    /* .header .headerMenu{ 
+        display: none;
+        background-color: lawngreen;
+    }
+    .header .menuIcon .menuHeader{
+        margin: 0 50px;
+        display: flex;
+        font-weight:800;
+        font-size:20px;
+        cursor:pointer;
+    }
+    .header .menuIcon .menuHeader:hover{   
+        color:#d1e877;
+        -webkit-animation: rotate-scale-up-hor .5s ease-out both;
+                animation: rotate-scale-up-hor .5s ease-out both;
+    }
+
+    /* .header .menuIcon ul:hover{
+        display: flex;
+        position: absolute;
+    
+        align-items: center;
+    
+        margin: 30px 0 0 -20px;
+        width: 120px;
+        background-color: #f3f3f3;
+    } 
+
+
+} */
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+  }
+  /* Style the line of navbar */
+  .topnav .listaUl li {
+    float: left;
+    display: flex;
+    flex-direction: row;
+    color: #0007;
+    font-size: 18px;
+    margin: 0 5px;
+    padding: 0 10px;
+  }
+  .topnav .listaUl .listaLi:nth-child(3){
+      margin-right: 5rem;
+  }
+  /* Style the links inside the navigation bar */
+  .topnav .listaUl .listaLi a{
+      color: #0007;
+  }
+  /* Change the color of links on hover */
+  .topnav .listaUl .listaLi a:hover {
+    transform: scale(1.2);
+    color: black;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 1190px) {
+    .topnav .listaUl .listaLi a{
+        display: none;
+    }
+    .topnav a.icon {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color:#000;
+      top: 0;
+      right: 0;
+      padding: 10px;
+      margin: 0 5rem;
+    }
+    .topnav.responsive .listaUl .listaLi a{
+        color: brown;
+        background-color: aqua;
+    }
+    /*Quando clica aciona esse style*/
+    .topnav.responsive a.icon {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        top: 0;
+        right: 0;
+        margin: 0 5rem;   
+        background-color: tomato;
+
+    }
+
+    .topnav.responsive .listaUl .listaLi a  {
+      background-color: #000;
+    }
+    
+    .topnav.responsive a:hover {
+    /* border-left: 4px solid #000; */
+    
+    }
+
+  }
+
+
+
+
+
+
+/* -----X----- Header Responsivo -----X------  */
+
 /* ------------- Css Container ------------- */
 
 .container{
@@ -176,3 +307,33 @@ body/{
     border-radius: 10px;
 }
 /* -----X------- Css Text ------X------ */
+
+
+@-webkit-keyframes rotate-scale-up-hor {
+    0% {
+    -webkit-transform: scale(1) rotateX(0);
+            transform: scale(1) rotateX(0);
+    }
+    50% {
+    -webkit-transform: scale(1) rotateX(-180deg);
+            transform: scale(1) rotateX(-180deg);
+    }
+    100% {
+    -webkit-transform: scale(1) rotateX(-360deg);
+            transform: scale(1) rotateX(-360deg);
+    }
+}
+@keyframes rotate-scale-up-hor {
+    0% {
+    -webkit-transform: scale(1) rotateX(0);
+            transform: scale(1) rotateX(0);
+    }
+    50% {
+    -webkit-transform: scale(1) rotateX(-180deg);
+            transform: scale(1) rotateX(-180deg);
+    }
+    100% {
+    -webkit-transform: scale(1) rotateX(-360deg);
+            transform: scale(1) rotateX(-360deg);
+    }
+}
