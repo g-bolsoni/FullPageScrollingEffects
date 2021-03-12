@@ -41,105 +41,10 @@ body/{
     color: #000;
     padding: 0 100px;
 }
-
-.header .headerMenu {
-    display: flex;
-
-}
-
-.header .headerMenu ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center; 
-
-    margin: 0 100px;
-
-    font-size: 18px;
-    color: #0007;
-    transition: color linear 0.2s;
-}
-.header .headerMenu li{
-    font-size: 18px;
-    color: #0007;
-    padding: 30px 10px;
-}
-
-.header .headerMenu li:hover{
-    color: #000;
-    transition: color linear 0.2s;
-    cursor: pointer;
-} 
-
-/* ------------------ */
-.header .headerMenu li:nth-child(1) ul{
-    display: none;
-}
-.header .headerMenu li:nth-child(1):hover ul{
-    display: block;
-    position: absolute;
-
-    align-items: center;
-
-    margin: 30px 0 0 -20px;
-    width: 120px;
-    background-color: #f3f3f3;
-}
-.header .headerMenu li:nth-child(1) ul li{
-    padding: 8px;
-    transition: border linear 0.1s;
-
-}
-.header .headerMenu li:nth-child(1) ul li:hover{
-    border-left: 4px solid #000;
-    transition: border linear 0.1s;
-}
-
 /* -------- Menu Responsivo ---------- */
-.header .menuHeader{
-    position: relative;
-    height: 3rem;
-    display: none;
-
-}
-/* .header .menuIcon ul li{
-    display: none;
-} */
 
 
 /* ----------- Header Responsivo ------------  */
-/* @media(max-width:1190px){
-    /* -------------- Menu responsivo -------------- */
-    /* .header .headerMenu{ 
-        display: none;
-        background-color: lawngreen;
-    }
-    .header .menuIcon .menuHeader{
-        margin: 0 50px;
-        display: flex;
-        font-weight:800;
-        font-size:20px;
-        cursor:pointer;
-    }
-    .header .menuIcon .menuHeader:hover{   
-        color:#d1e877;
-        -webkit-animation: rotate-scale-up-hor .5s ease-out both;
-                animation: rotate-scale-up-hor .5s ease-out both;
-    }
-
-    /* .header .menuIcon ul:hover{
-        display: flex;
-        position: absolute;
-    
-        align-items: center;
-    
-        margin: 30px 0 0 -20px;
-        width: 120px;
-        background-color: #f3f3f3;
-    } 
-
-
-} */
 
 
 /* Add a black background color to the top navigation */
@@ -159,7 +64,7 @@ body/{
     padding: 0 10px;
   }
   .topnav .listaUl .listaLi:nth-child(3){
-      margin-right: 5rem;
+      margin-right: 4rem;
   }
   /* Style the links inside the navigation bar */
   .topnav .listaUl .listaLi a{
@@ -177,9 +82,11 @@ body/{
   }
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
   @media screen and (max-width: 1190px) {
-    .topnav .listaUl .listaLi a{
+    .header .logo{padding: 0 50px;}
+    .topnav .listaUl {
         display: none;
     }
+    /* Posição do Icon Menu*/
     .topnav a.icon {
       position: relative;
       display: flex;
@@ -191,11 +98,8 @@ body/{
       padding: 10px;
       margin: 0 5rem;
     }
-    .topnav.responsive .listaUl .listaLi a{
-        color: brown;
-        background-color: aqua;
-    }
-    /*Quando clica aciona esse style*/
+    
+    /*Quando clica no menu aciona esse style*/
     .topnav.responsive a.icon {
         position: relative;
         display: flex;
@@ -208,16 +112,24 @@ body/{
 
     }
 
-    .topnav.responsive .listaUl .listaLi a  {
-      background-color: #000;
-    }
-    
-    .topnav.responsive a:hover {
-    /* border-left: 4px solid #000; */
-    
+    .topnav.responsive .listaUl {
+        background-color: #f3f3f3;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
     }
 
+    .topnav.responsive .listaUl .listaLi{
+
+    }
+    .topnav.responsive .listaUl .listaLi a:hover{
+        transform: scale(1.05);
+    }
   }
+
+  @media screen and (max-widht: 400px)
 
 
 
