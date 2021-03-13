@@ -54,7 +54,7 @@ body/{
     overflow: hidden;
   }
   /* Style the line of navbar */
-  .topnav .listaUl li {
+  .topnav .listaUl .listaLi {
     float: left;
     display: flex;
     flex-direction: row;
@@ -63,12 +63,14 @@ body/{
     margin: 0 5px;
     padding: 0 10px;
   }
-  .topnav .listaUl .listaLi:nth-child(3){
+  .topnav .listaUl .listaLi:nth-child(5){
       margin-right: 4rem;
   }
   /* Style the links inside the navigation bar */
   .topnav .listaUl .listaLi a{
       color: #0007;
+      padding: 10px auto;
+
   }
   /* Change the color of links on hover */
   .topnav .listaUl .listaLi a:hover {
@@ -79,11 +81,12 @@ body/{
   /* Hide the link that should open and close the topnav on small screens */
   .topnav .icon {
     display: none;
+    font-size: 20px;
   }
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 1190px) {
-    .header .logo{padding: 0 50px;}
-    .topnav .listaUl {
+  @media screen and (max-width: 1100px) {
+    .header .logo{padding: 0 20px;}
+    .topnav .listaUl  {
         display: none;
     }
     /* Posição do Icon Menu*/
@@ -94,9 +97,11 @@ body/{
       justify-content: center;
       color:#000;
       top: 0;
-      right: 0;
+      right: 0px;
       padding: 10px;
-      margin: 0 5rem;
+      margin: 0 2rem;
+
+      
     }
     
     /*Quando clica no menu aciona esse style*/
@@ -106,35 +111,30 @@ body/{
         flex-direction: column;
         justify-content: center;
         top: 0;
-        right: 0;
+        right: -48px;
         margin: 0 5rem;   
-        background-color: tomato;
+
+        -webkit-animation: rotate-hor-center .7s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+                animation: rotate-hor-center .7s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 
     }
 
     .topnav.responsive .listaUl {
         background-color: #f3f3f3;
+        position: absolute;
         display: flex;
         flex-direction: column;
-        position: absolute;
+        padding: 2px;
         top: 50px;
-        right: 0;
+        right: -50px;
     }
 
-    .topnav.responsive .listaUl .listaLi{
+  
 
-    }
     .topnav.responsive .listaUl .listaLi a:hover{
         transform: scale(1.05);
     }
   }
-
-  @media screen and (max-widht: 400px)
-
-
-
-
-
 
 /* -----X----- Header Responsivo -----X------  */
 
@@ -143,15 +143,24 @@ body/{
 .container{
     position: relative;
     overflow: auto;
-    scroll-snap-type: y mandatory;
+    display: flex;
+    flex-direction: column;
+   
+
+    /* scroll-snap-type: y mandatory; */
 }
 
 .container .section{
+    display: flex;
+     justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
     position: relative;
     width: 100%;
     height: 100vh;
     background-blend-mode: darken;
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
 }
 /* -----X------ Css Container ------X------ */
 
@@ -160,7 +169,7 @@ body/{
 /* Style backgrounds */
 
 .container .section:nth-child(1){
-    background: url('assets/cbg1.jpg');
+    background: url('assets/cbg4.jpg');
     background-size:cover, contain, auto ;
     background-attachment: fixed;
     
@@ -175,13 +184,12 @@ body/{
     background-size:cover, contain, auto ;
     background-attachment: fixed;
 }.container .section:nth-child(4){
-    background: url('assets/cbg4.jpg');
-    background-size:cover, contain, auto ;
+    background: #fff;
     background-attachment: fixed;
     
 }.container .section:nth-child(5){
     background: url('assets/cbg5.jpg');
-    background-size:cover, contain, auto ;
+    background-size:cover ;
     background-attachment: fixed;
     
 }
@@ -189,63 +197,269 @@ body/{
 
 /* ------------- Css Text ------------- */
 
-
+/* -------- Geral -------*/
 .container .section .content{
-    position: absolute;
-    top: 100px;
-    left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
+
+    margin-top: -9rem;
     max-width: 700px;
+   font-size: 1.2em;
+
 }
-.container .section .content h2{
-   background: #fff;
-   color: #111;
-   font-weight: 600;
+/* -------- Geral -------*/
+/* ------------ Screen 1 ---------------*/
+.container .section .content #firstH2{
+   display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    color: #FFF;
+    font-weight: 600;
 
    display: inline-block;
-   padding: 10px 20px;
-   font-size: 2em;
-   box-shadow: 5px 5px 5px rgba(0, 0 , 0 , 0.5);
-   border-radius: 10px;
+   padding: 10px 40px;
 }
-.container .section .content p{
-    background: #fff;
-    color: #111;
+.container .section .content #firstP{
+   color: #FFF;
     font-weight: 300;
- 
+
     padding: 10px 20px;
     margin-top: 10px;
 
-    box-shadow: 5px 5px 5px rgba(0, 0 , 0 , 0.5);
-    border-radius: 10px;
 }
+.container #imageOne{
+    height: 100px;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    bottom: 0;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    margin-bottom: 5rem;
+    padding: 15px;
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-radius: 50%;
+}
+.container #imageOne:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+
+}
+/* -----X------- Screen 1 -------X-------*/
+/* ------------ Screen 2 ---------------*/
+.container .section .contentSecond{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-content: center;
+    align-items: flex-start;
+    
+    max-width:550px;
+    height: 40vh;
+    
+    position: absolute;
+    top: 25%;
+    right: 0px;
+
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px 0 0 10px;
+
+    text-align: justify;
+}
+
+.container .section .contentSecond #secondH2{
+    display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-content: center;
+     align-items: center;
+ 
+    color: #000;
+    font-weight: 600;
+ 
+    display: inline-block;
+    margin: 2.5rem 1.5rem 0; 
+    /* padding: 10px 40px; */
+ }
+ .container .section .contentSecond #secondP{
+    color: #000;
+    font-weight: 300;
+ 
+    margin: .5rem 1.5rem 0; 
+    padding-right:10px ;
+    
+ 
+ }
+ .container #imageTwo{
+    height: 100px;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    bottom: 0;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    padding: 15px;
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-bottom: none;
+    border-radius: 50% 50% 0 0  ;
+}
+.container #imageTwo:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+/* -----X------- Screen 2 -------X-------*/
+/* ------------- Screen 3 -------------- */
+.container .section .contentThree{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-content: center;
+    align-items: flex-start;
+    
+    max-width:550px;
+    height: 40vh;
+    
+    position: absolute;
+    top: 25%;
+    left: 0px;
+
+    background-color: rgba(255, 255, 255, 1);
+    border-radius:  0 10px 10px 0;
+
+    text-align: justify;
+}
+
+.container .section .contentThree #threeH2{
+    display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-content: center;
+     align-items: center;
+ 
+    color: #000;
+    font-weight: 600;
+ 
+    display: inline-block;
+    margin: 2.5rem 1.5rem 0; 
+    /* padding: 10px 40px; */
+ }
+ .container .section .contentThree #threeP{
+    color: #000;
+    font-weight: 300;
+ 
+    margin: .5rem 1.5rem 0; 
+    padding-right:10px;
+ }
+/* Imagem */
+.container #imageThree{
+    height: 100px;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    bottom: 0;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    padding: 15px;
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-bottom: none;
+    border-radius: 50% 50% 0 0  ;
+}
+.container #imageThree:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+/* -----X-------- Screen 3 --------X------ */
+/* ------------- Screen 4 -------------- */
+.container .section .contentFor{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-content: center;
+    align-items: center;
+    
+    max-width:1000px;
+    
+    position: absolute;
+    top: 15%;
+
+    text-align: justify;
+}
+
+.container .section .contentFor #forH2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+ 
+    color: #000;
+    font-weight: bold 700;
+    font-size: 30pt;
+ 
+}
+ .container .section .contentFor #forP{
+    color: #000;
+    font-weight: 300;
+ 
+    margin: .5rem 1.5rem 0; 
+    padding-right:10px;
+ }
+
+/* -----X-------- Screen 4 --------X------ */
+
 /* -----X------- Css Text ------X------ */
 
+/*-------------- Screnn 1190px ------------*/
 
-@-webkit-keyframes rotate-scale-up-hor {
+
+/*------X-------- Screnn 1190px ----X------*/
+
+/**
+ * ----------------------------------------
+ * animation rotate-hor-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes rotate-hor-center {
     0% {
-    -webkit-transform: scale(1) rotateX(0);
-            transform: scale(1) rotateX(0);
-    }
-    50% {
-    -webkit-transform: scale(1) rotateX(-180deg);
-            transform: scale(1) rotateX(-180deg);
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
     }
     100% {
-    -webkit-transform: scale(1) rotateX(-360deg);
-            transform: scale(1) rotateX(-360deg);
+      -webkit-transform: rotateX(-360deg);
+              transform: rotateX(-360deg);
     }
-}
-@keyframes rotate-scale-up-hor {
+  }
+  @keyframes rotate-hor-center {
     0% {
-    -webkit-transform: scale(1) rotateX(0);
-            transform: scale(1) rotateX(0);
-    }
-    50% {
-    -webkit-transform: scale(1) rotateX(-180deg);
-            transform: scale(1) rotateX(-180deg);
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
     }
     100% {
-    -webkit-transform: scale(1) rotateX(-360deg);
-            transform: scale(1) rotateX(-360deg);
+      -webkit-transform: rotateX(-360deg);
+              transform: rotateX(-360deg);
     }
-}
+  }
+  
